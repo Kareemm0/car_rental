@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:car_rental/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -12,7 +14,9 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 3), () {});
+    Timer(const Duration(seconds: 3), () {
+      GoRouter.of(context).push(AppRouter.onBoardingView);
+    });
   }
 
   @override
