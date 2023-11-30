@@ -1,7 +1,8 @@
-import 'package:car_rental/features/onboarding/presentation/view/widget/onboarding_view_body.dart';
+import 'widget/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatelessWidget {
+  static const routeName = "/OnBoardingView";
   const OnBoardingView({super.key});
 
   @override

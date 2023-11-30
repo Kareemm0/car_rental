@@ -1,11 +1,11 @@
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/core/utils/app_router.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_text.dart';
+import '../../../../core/utils/app_color.dart';
+import '../../login/presentaion/view/widgets/custom_text.dart';
+import '../../resetPassword/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
-import 'package:go_router/go_router.dart';
 
 class VerficationCode extends StatelessWidget {
+  static const routeName = "/VerficationCode";
   const VerficationCode({super.key});
 
   @override
@@ -32,7 +32,7 @@ class VerficationCode extends StatelessWidget {
               showFieldAsBox: true,
               onCodeChanged: (String code) {},
               onSubmit: (String verificationCode) {
-                GoRouter.of(context).push(AppRouter.resetPassword);
+                Navigator.pushNamed(context, ResetPassword.routeName);
               },
             ),
             const SizedBox(

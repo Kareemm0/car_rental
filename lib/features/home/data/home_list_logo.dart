@@ -1,17 +1,19 @@
-import 'package:car_rental/core/utils/app_image.dart';
+import '../../../core/utils/app_image.dart';
 
 class HomeLogoModel {
   final String image;
+  final String name;
 
   HomeLogoModel({
     required this.image,
+    required this.name,
   });
 }
 
 final List<HomeLogoModel> homeList = [
-  HomeLogoModel(image: AppImage.bmw),
-  HomeLogoModel(image: AppImage.marcides),
-  HomeLogoModel(image: AppImage.parsche),
-  HomeLogoModel(image: AppImage.honda),
-  HomeLogoModel(image: AppImage.toyota),
+  HomeLogoModel(image: AppImage.bmw, name: "BMW"),
+  HomeLogoModel(image: AppImage.marcides, name: "Mercedes"),
+  HomeLogoModel(image: AppImage.parsche, name: "Porsche"),
+  HomeLogoModel(image: AppImage.honda, name: "Honda"),
+  HomeLogoModel(image: AppImage.toyota, name: "Toyota"),
 ];

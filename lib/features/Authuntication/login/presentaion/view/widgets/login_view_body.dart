@@ -1,17 +1,17 @@
-import 'package:car_rental/core/function/vaildator.dart';
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/core/utils/app_image.dart';
-import 'package:car_rental/core/utils/app_router.dart';
-import 'package:car_rental/core/utils/app_string.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_elevated_button.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_forget_password.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_sign_up.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_social_sign_up.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_text.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_text_form_filde.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/cutom_divider.dart';
+import '../../../../../../core/function/vaildator.dart';
+import '../../../../../../core/utils/app_color.dart';
+import '../../../../../../core/utils/app_image.dart';
+import '../../../../../../core/utils/app_string.dart';
+import 'custom_elevated_button.dart';
+import 'custom_forget_password.dart';
+import 'custom_sign_up.dart';
+import 'custom_social_sign_up.dart';
+import 'custom_text.dart';
+import 'custom_text_form_filde.dart';
+import 'cutom_divider.dart';
+import '../../../../register/view/register.dart';
+import '../../../../../home/presentation/view/home.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
@@ -50,7 +50,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
     final isVaild = formKey.currentState!.validate();
     FocusScope.of(context).unfocus();
     if (isVaild) {
-      GoRouter.of(context).push(AppRouter.homeView);
+      Navigator.pushNamed(context, HomePage.routeName);
     }
   }
 
@@ -150,7 +150,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   text: "First Time Here? ",
                   textAuth: "Sign Up ",
                   onTap: () {
-                    GoRouter.of(context).push(AppRouter.registerView);
+                    Navigator.pushNamed(context, RegisterView.routeName);
                   },
                 ),
                 const CustomDivider(),

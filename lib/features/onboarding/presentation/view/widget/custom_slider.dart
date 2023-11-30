@@ -1,4 +1,4 @@
-import 'package:car_rental/core/utils/app_color.dart';
+import '../../../../../core/utils/app_color.dart';
 import 'package:flutter/material.dart';
 
 class CustomSlider extends StatelessWidget {

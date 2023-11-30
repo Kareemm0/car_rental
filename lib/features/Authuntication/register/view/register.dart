@@ -1,7 +1,9 @@
-import 'package:car_rental/features/Authuntication/register/view/widget/register_view_body.dart';
+import 'widget/register_view_body.dart';
 import 'package:flutter/material.dart';
 
 class RegisterView extends StatelessWidget {
+  static const routeName = "RegisterView";
+
   const RegisterView({super.key});
 
   @override

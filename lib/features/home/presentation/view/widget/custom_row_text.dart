@@ -1,5 +1,5 @@
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/features/home/presentation/view/widget/custom_home_text.dart';
+import '../../../../../core/utils/app_color.dart';
+import 'custom_home_text.dart';
 import 'package:flutter/material.dart';
 
 class CustomRowText extends StatelessWidget {
@@ -12,7 +12,9 @@ class CustomRowText extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomHomeText(text: "All Cars", color: AppColor.black),
+          CustomHomeText(
+            text: "All Cars",
+          ),
           CustomHomeText(text: "View All", color: AppColor.primary)
         ],
       ),

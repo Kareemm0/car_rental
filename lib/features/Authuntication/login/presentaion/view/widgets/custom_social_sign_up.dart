@@ -1,6 +1,7 @@
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/core/utils/app_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../../core/utils/app_color.dart';
+import '../../../../../../core/utils/app_image.dart';
 
 class CustomSocialSignUp extends StatelessWidget {
   const CustomSocialSignUp({super.key});
@@ -13,8 +14,7 @@ class CustomSocialSignUp extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor.backgroung),
+              style: ElevatedButton.styleFrom(backgroundColor: AppColor.white),
               onPressed: () {},
               child: const Row(
                 children: [
@@ -33,7 +33,8 @@ class CustomSocialSignUp extends StatelessWidget {
               )),
           ElevatedButton(
               style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColor.backgroung),
+                backgroundColor: AppColor.white,
+              ),
               onPressed: () {},
               child: Row(
                 children: [

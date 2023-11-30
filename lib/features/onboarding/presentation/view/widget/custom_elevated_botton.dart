@@ -1,4 +1,5 @@
-import 'package:car_rental/core/utils/app_string.dart';
+import '../../../../../core/utils/app_color.dart';
+import '../../../../../core/utils/app_string.dart';
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
@@ -10,22 +11,21 @@ class CustomElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 100,
-      child: ElevatedButton(
-        onPressed: onPressed,
-        child: const Row(
-          children: [
-            Text(AppString.next),
-            SizedBox(
-              width: 7,
-            ),
-            Icon(
-              Icons.arrow_right_alt,
-            ),
-          ],
+    return ElevatedButton.icon(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: AppColor.primary,
+      ),
+      label: const Text(
+        AppString.next,
+        style: TextStyle(
+          color: AppColor.white,
         ),
       ),
+      icon: const Icon(
+        Icons.arrow_right_alt,
+        color: AppColor.white,
+      ),
+      onPressed: onPressed,
     );
   }
 }

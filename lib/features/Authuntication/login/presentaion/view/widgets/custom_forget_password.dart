@@ -1,8 +1,7 @@
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/core/utils/app_router.dart';
-import 'package:car_rental/core/utils/app_string.dart';
+import '../../../../../../core/utils/app_color.dart';
+import '../../../../../../core/utils/app_string.dart';
+import '../../../../forgetPassword/view/forget_password.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class CustomForgetPassword extends StatelessWidget {
   const CustomForgetPassword({super.key});
@@ -13,7 +12,7 @@ class CustomForgetPassword extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 30),
       child: InkWell(
         onTap: () {
-          GoRouter.of(context).push(AppRouter.forgetPasswordView);
+          Navigator.pushNamed(context, ForgetPasswordView.routName);
         },
         child: const Text(
           AppString.forgetPassowrd,

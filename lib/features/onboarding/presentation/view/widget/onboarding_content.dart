@@ -1,7 +1,8 @@
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/features/onboarding/presentation/view/widget/custom_image.dart';
-import 'package:car_rental/features/onboarding/presentation/view/widget/custom_text.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../../core/utils/app_color.dart';
+import 'custom_image.dart';
+import 'custom_text.dart';
 
 class OnBoardingContent extends StatelessWidget {
   final String image, title, body;

@@ -1,11 +1,10 @@
-import 'package:car_rental/core/utils/app_router.dart';
-import 'package:car_rental/features/onboarding/data/models/onboarding_model.dart';
-import 'package:car_rental/features/onboarding/presentation/view/widget/custom_elevated_botton.dart';
-import 'package:car_rental/features/onboarding/presentation/view/widget/custom_slider.dart';
-import 'package:car_rental/features/onboarding/presentation/view/widget/custom_text_button.dart';
-import 'package:car_rental/features/onboarding/presentation/view/widget/onboarding_content.dart';
+import '../../../../Authuntication/login/presentaion/view/login.dart';
+import '../../../data/models/onboarding_model.dart';
+import 'custom_elevated_botton.dart';
+import 'custom_slider.dart';
+import 'custom_text_button.dart';
+import 'onboarding_content.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
@@ -73,7 +72,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                   CustomElevatedButton(onPressed: () {
                     pageIndex++;
                     if (pageIndex > onboardingList.length - 1) {
-                      GoRouter.of(context).push(AppRouter.loginView);
+                      Navigator.pushNamed(context, LoginPage.routeName);
                     } else {
                       _pageController.nextPage(
                         duration: const Duration(microseconds: 300),

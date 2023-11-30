@@ -1,13 +1,13 @@
-import 'package:car_rental/core/function/vaildator.dart';
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/core/utils/app_router.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_elevated_button.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_text.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_text_form_filde.dart';
+import '../../../../core/function/vaildator.dart';
+import '../../../../core/utils/app_color.dart';
+import '../../login/presentaion/view/widgets/custom_elevated_button.dart';
+import '../../login/presentaion/view/widgets/custom_text.dart';
+import '../../login/presentaion/view/widgets/custom_text_form_filde.dart';
+import '../../verivication_code/view/verification_code.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class ForgetPasswordView extends StatefulWidget {
+  static const routName = "/ForgetPasswordView";
   const ForgetPasswordView({super.key});
 
   @override
@@ -23,7 +23,7 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
     final isVaild = formKey.currentState!.validate();
     FocusScope.of(context).unfocus();
     if (isVaild) {
-      GoRouter.of(context).push(AppRouter.verficationCode);
+      Navigator.pushNamed(context, VerficationCode.routeName);
     }
   }
 

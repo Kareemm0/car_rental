@@ -1,5 +1,5 @@
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/core/utils/app_string.dart';
+import '../../../../core/utils/app_color.dart';
+import '../../../../core/utils/app_string.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextSplash extends StatelessWidget {

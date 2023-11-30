@@ -1,13 +1,12 @@
-import 'package:car_rental/core/utils/app_color.dart';
-import 'package:car_rental/core/utils/app_router.dart';
-import 'package:car_rental/core/utils/app_string.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_sign_up.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_social_sign_up.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_text.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/cutom_divider.dart';
-import 'package:car_rental/features/Authuntication/register/view/widget/custom_text_filed_section.dart';
+import '../../../../../core/utils/app_color.dart';
+import '../../../../../core/utils/app_string.dart';
+import '../../../login/presentaion/view/login.dart';
+import '../../../login/presentaion/view/widgets/custom_sign_up.dart';
+import '../../../login/presentaion/view/widgets/custom_social_sign_up.dart';
+import '../../../login/presentaion/view/widgets/custom_text.dart';
+import '../../../login/presentaion/view/widgets/cutom_divider.dart';
+import 'custom_text_filed_section.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class RegisterViewBody extends StatefulWidget {
   const RegisterViewBody({super.key});
@@ -46,7 +45,7 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
                 text: "Already Have An Account ?",
                 textAuth: "Log in ",
                 onTap: () {
-                  GoRouter.of(context).push(AppRouter.loginView);
+                  Navigator.pushNamed(context, LoginPage.routeName);
                 },
               ),
               const CustomDivider(),

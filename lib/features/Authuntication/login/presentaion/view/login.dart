@@ -1,7 +1,9 @@
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/login_view_body.dart';
 import 'package:flutter/material.dart';
 
+import 'widgets/login_view_body.dart';
+
 class LoginPage extends StatelessWidget {
+  static const routeName = "/LoginPage";
   const LoginPage({super.key});
 
   @override

@@ -1,9 +1,8 @@
-import 'package:car_rental/core/function/vaildator.dart';
-import 'package:car_rental/core/utils/app_router.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_elevated_button.dart';
-import 'package:car_rental/features/Authuntication/login/presentaion/view/widgets/custom_text_form_filde.dart';
+import '../../../../../core/function/vaildator.dart';
+import '../../../login/presentaion/view/widgets/custom_elevated_button.dart';
+import '../../../login/presentaion/view/widgets/custom_text_form_filde.dart';
+import '../../../../home/presentation/view/home.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:iconly/iconly.dart';
 
 class CustomTextFiledSection extends StatefulWidget {
@@ -62,7 +61,7 @@ class _CustomTextFiledSectionState extends State<CustomTextFiledSection> {
     FocusScope.of(context).unfocus();
     final isVaild = formKey.currentState!.validate();
     if (isVaild) {
-      GoRouter.of(context).push(AppRouter.homeView);
+      Navigator.pushNamed(context, HomePage.routeName);
     }
   }
 

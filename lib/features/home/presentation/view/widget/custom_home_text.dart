@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class CustomHomeText extends StatelessWidget {
   final String text;
-  final Color color;
+  final Color? color;
   const CustomHomeText({
     super.key,
     required this.text,
-    required this.color,
+    this.color,
   });
 
   @override
