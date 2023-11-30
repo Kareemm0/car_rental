@@ -14,6 +14,7 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   void initState() {
+    super.initState();
     Timer(const Duration(seconds: 3), () {
       GoRouter.of(context).push(AppRouter.onBoardingView);
     });
